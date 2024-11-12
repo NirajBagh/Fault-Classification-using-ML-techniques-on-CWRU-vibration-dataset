@@ -58,19 +58,6 @@ The following Machine learning classification models were experimented.
 k-fold cross validation was used to prevent over-fitting and ensure generalization.
 
 ## Results   
-### Support Vector Machine - RBF - Decision Boundary represented in 2D
-<img src="/Images/SVM.png" width=50% height=50%>
-The decision boundary is drawn with 2 principal components in 2D compared to the 5 principal components available. Therefore, in many regions, data seem to overlap which is not the actual case. 
-
-### 1D Convolutional Neural Network 
-![](/Images/CNN_1D.png)
-### 2D Convolutional Neural Network 
-![](/Images/CNN_2D.png)
-### Long Short-Term Memory
-![](/Images/LSTM.png)
-### Comparison 
-<img src="/Images/ComparisonPlot.png" width=80% height=70%>
-
 Well, 1D CNN seems to be the winner in here. But, when varying the stride length to higher values more than 200 while sampling, 2D CNN proved to be fast and efficient in capturing the features. Also, though LSTM has decent accuracy, it consumes a lot of time to train, which could be frowned upon.
 
 One of the observation was that the accuracy increases on decreasing the stride interval during sampling. This gives better opportunity to capture the feature and acts as data augmentation as well. After many trials the stride interval length of 200 was chosen to perform comparison between different ML techniques under reasonable computing time and resources.  
